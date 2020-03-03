@@ -24,10 +24,12 @@ class pastelController extends Controller
     public function store(Request $request){
 
         $validateData = $request->validate([
-            'titulo'=>'required|unique:articles|min:6',
+            'titulo'=>'required|unique:pasteles|min:6',
             'ingredientes'=>'required',
             'preparacion'=>'required'
 
         ]);
+
+        
     }
 }

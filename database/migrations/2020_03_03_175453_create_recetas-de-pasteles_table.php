@@ -13,7 +13,7 @@ class CreateRecetasDePastelesTable extends Migration
      */
     public function up()
     {
-        Schema::create('recetas-de-pasteles', function (Blueprint $table) {
+        Schema::create('pasteles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titulo');
             $table->mediumText('ingredientes');
@@ -29,6 +29,6 @@ class CreateRecetasDePastelesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('recetas-de-pasteles');
+        Schema::dropIfExists('pasteles');
     }
 }

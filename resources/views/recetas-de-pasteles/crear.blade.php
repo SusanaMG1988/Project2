@@ -1,4 +1,4 @@
-<form method="POST" action={{url('recetas-de-pasteles/crear')}}>
+<form method="POST" action={{url('recetas-de-pasteles/store')}}>
     {{csrf_field()}}
 
 
