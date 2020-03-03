@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/recetas-de-pasteles', 'PastelController@index');
+
+Route::get('/recetas-de-pasteles/{id}', 'PastelController@show')->where('id', '[0-9 ]+');

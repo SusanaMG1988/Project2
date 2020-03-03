@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateRecetasDePastelesTable extends Migration
 {
-    /**
+   /**
      * Run the migrations.
      *
      * @return void
@@ -14,7 +14,10 @@ class CreateRecetasDePastelesTable extends Migration
     public function up()
     {
         Schema::create('recetas-de-pasteles', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
+            $table->string('titulo');
+            $table->mediumText('ingredientes');
+            $table->mediumText('preparación');
             $table->timestamps();
         });
     }
