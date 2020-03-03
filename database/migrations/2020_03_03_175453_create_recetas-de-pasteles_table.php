@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePastelesTable extends Migration
+class CreateRecetasDePastelesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePastelesTable extends Migration
      */
     public function up()
     {
-        Schema::create('pasteles', function (Blueprint $table) {
+        Schema::create('recetas-de-pasteles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreatePastelesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pasteles');
+        Schema::dropIfExists('recetas-de-pasteles');
     }
 }
