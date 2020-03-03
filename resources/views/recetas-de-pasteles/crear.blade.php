@@ -1,3 +1,15 @@
+@extends('layout')
+@section('content')
+<style>
+    body{
+        padding:5%;
+    }
+    input{
+        border-radius: 5px;
+        margin:5px;
+    }
+
+</style>
 <form method="POST" action={{url('recetas-de-pasteles/store')}}>
     {{csrf_field()}}
 
@@ -26,3 +38,5 @@
     <button type="submit">Enviar</button>
 
 </form>
+
+@endsection
