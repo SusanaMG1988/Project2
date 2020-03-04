@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Pastel;
 use Illuminate\Http\Request;
 
-
-class pastelController extends Controller
+class PastelController extends Controller
 {
-
     public function index(){
-         $pasteles = [];
+        $pasteles = [''];
         return view('recetas-de-pasteles.index')->with('pasteles', $pasteles);
     }
 
@@ -22,7 +19,9 @@ class pastelController extends Controller
     {
         return view('recetas-de-pasteles.crear');
     }
+
     public function store(Request $request){
+        
         $validateData = $request->validate([
             'titulo'=>'required|unique:pasteles|min:6',
             'ingredientes'=>'required',
@@ -41,6 +40,4 @@ class pastelController extends Controller
 
 
     }
-
-
 }

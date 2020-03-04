@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class recetas_de_pasteles extends Seeder
+class RecetasDePasteles extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,8 +13,7 @@ class recetas_de_pasteles extends Seeder
     {
         for($i = 0; $i<10; $i++){
             Article::Create([
-
-
+                
             ]);
         }
     }

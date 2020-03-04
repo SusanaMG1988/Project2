@@ -3,6 +3,6 @@
 </li>
 
 <li class="nav-item {{(request()->is('pasteles*')) ? 'active' : '' }}">
-        <a class="nav-link" href="{{asset('pasteles')}}" tabindex="-1">Pasteles</a>
+        <a class="nav-link" href="{{asset('recetas-de-pasteles')}}" tabindex="-1">Pasteles</a>
 </li>
 
