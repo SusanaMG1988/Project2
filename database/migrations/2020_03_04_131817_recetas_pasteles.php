@@ -11,9 +11,16 @@ class RecetasPasteles extends Migration
      *
      * @return void
      */
+
     public function up()
     {
-        //
+        Schema::create('recetas_pasteles', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('titulo');
+            $table->mediumText('ingredientes');
+            $table->mediumText('preparacion');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +30,7 @@ class RecetasPasteles extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('recetas_pasteles');
     }
+
 }

@@ -1,5 +1,8 @@
 @extends('layout')
+
 @section('content')
+
+{{-- Estilos --}}
 <style>
     body{
         padding:5%;
@@ -8,8 +11,15 @@
         border-radius: 5px;
         margin:5px;
     }
+    .col-4{
+        /* sidebar*/
+        visibility: hidden;
+    }
 
 </style>
+
+{{-- Formulario para crear nuevas recetas  --}}
+
 <form method="POST" action={{url('recetas-de-pasteles/store')}}>
     {{csrf_field()}}
 
@@ -31,8 +41,8 @@
     <textarea name="preparacion" id="preparacion" cols="30" rows="10" placeholder="preparacion" value={{old('preparacion')}}></textarea>
 
     {{-- control de errores cuerpo --}}
-    @if($errors->has('cuerpo'))
-    <div class="alert alert-danger">{{ $errors->first('cuerpo') }}</div>
+    @if($errors->has('preparacion'))
+    <div class="alert alert-danger">{{ $errors->first('preparacion') }}</div>
     @endif
 
     <button type="submit">Enviar</button>
@@ -40,3 +50,5 @@
 </form>
 
 @endsection
+
+

@@ -1,6 +1,17 @@
 @extends('layout')
 @section('content')
+<style>
+    body{
+        padding:5%;
 
+
+    }
+
+    .col-4{
+        visibility: hidden; /* sidebar */
+    }
+
+    </style>
 <div>
 <h1>Bienvenido a mi página de pasteles</h1>
 </div>
@@ -9,3 +20,4 @@
 </div>
 
 @endsection
+
