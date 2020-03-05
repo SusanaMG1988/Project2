@@ -23,7 +23,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/recetas-de-pasteles', 'PastelController@index');
-Route::get('/recetas-de-pasteles/{id}', 'PastelController@show')->where('id', '[0-9 ]+')->name("detalles_pastel");
+Route::get('/recetas-de-pasteles', 'PastelController@index')->name('index');
 Route::get('/recetas-de-pasteles/crear','PastelController@crear')->name("nuevo_pastel");
 Route::post('/recetas-de-pasteles/store','PastelController@store')->name("store_pasteles");

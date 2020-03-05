@@ -9,16 +9,11 @@ class PastelController extends Controller
 
 
     public function index(){
-        $pasteles = [''];
+        $pasteles = RecetasDePasteles::all();
         return view('recetas-de-pasteles.index')->with('pasteles', $pasteles);
     }
 
-    public function show($id)
-    {
-        $pastel = pastel::find($id);
-        return view('recetas-de-pasteles.show', compact('pastel'));
-        // return view('recetas-de-pasteles.show', ['id' => $id]);
-    }
+
     public function crear()
     {
         return view('recetas-de-pasteles.crear');
