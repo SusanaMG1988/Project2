@@ -21,5 +21,5 @@
     @parent
 
     <a href={{url()->previous()}}>Volver</a>
-@endsection --}}
-
+@endsection
+ --}}

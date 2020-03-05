@@ -16,7 +16,7 @@ class PastelController extends Controller
     public function show($id)
     {
         $pastel = pastel::find($id);
-        return view('recetas-de-pasteles.index', compact('pastel'));
+        return view('recetas-de-pasteles.show', compact('pastel'));
         // return view('recetas-de-pasteles.show', ['id' => $id]);
     }
     public function crear()
