@@ -4,7 +4,7 @@
 @section('content')
 
     <style>
-        .content{
+        body{
             padding: 5%;
         }
     </style>
@@ -15,7 +15,7 @@
        {{-- <li style = "list-style:none;"> {{$pastel->titulo}}
             <a href={{route('detalles_pastel',['id'=>$pastel->id])}}>Receta</a>
        </li> --}}
-       
+
     @endforeach
     </ul>
 
